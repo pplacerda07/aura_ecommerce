@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produtos | Aura</title>
+  <meta name="description" content="Janelas, portas e box de vidro com fabricação própria. Filtre por categoria, linha, cor e preço, escolha a medida do seu vão e finalize o pedido pelo WhatsApp.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Aura">
+  <meta property="og:title" content="Produtos | Aura">
+  <meta property="og:description" content="Janelas, portas e box de vidro prontos para instalar. Escolha o modelo e a medida, a gente entrega em todo o Brasil.">
+  <meta property="og:image" content="https://auravidros.com.br/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aura: janelas, portas e box de vidro">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/paginas/catalogo.css">
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/produtos.js"></script>
+  <script defer src="assets/js/core.js"></script>
+  <script defer src="assets/js/ui.js"></script>
+  <script defer src="assets/js/paginas/catalogo.js"></script>
+</head>
+<body data-pagina="catalogo">
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <div id="aura-header"></div>
+
+  <main id="conteudo">
+
+    <!-- MIGALHAS -->
+    <div class="container">
+      <nav class="migalhas" aria-label="Você está aqui">
+        <ol data-migalhas>
+          <li><a href="index.html">Início</a></li>
+          <li><span aria-current="page">Produtos</span></li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- TOPO DA LISTAGEM -->
+    <section class="pagina-topo catalogo-topo" aria-labelledby="catalogo-titulo">
+      <div class="container">
+        <div class="catalogo-topo__painel" data-topo-painel>
+          <div class="catalogo-topo__texto">
+            <span class="eyebrow"><i class="tz"></i><span data-eyebrow>Catálogo</span></span>
+            <h1 id="catalogo-titulo" data-titulo>Todos os produtos</h1>
+            <p data-descricao>Janelas, portas e box de vidro com fabricação própria. Escolha o modelo, a medida do seu vão e finalize pelo WhatsApp com a nossa equipe.</p>
+            <nav class="catalogo-subs" data-subs aria-label="Tipos de produto" hidden></nav>
+          </div>
+          <div class="catalogo-topo__visual" data-visual hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LISTAGEM -->
+    <div class="container catalogo" data-catalogo>
+
+      <!-- FILTROS: barra lateral no computador, gaveta no celular -->
+      <div class="drawer drawer--esquerda catalogo-filtros" id="filtros">
+        <div class="drawer__fundo" data-fechar-drawer></div>
+        <aside class="drawer__painel catalogo-filtros__painel" aria-labelledby="filtros-titulo">
+          <div class="drawer__topo catalogo-filtros__topo">
+            <h2 id="filtros-titulo">Filtros</h2>
+            <button type="button" class="catalogo-filtros__limpar" data-limpar-filtros hidden>Limpar tudo</button>
+            <button type="button" class="icon-btn catalogo-filtros__fechar" data-fechar-drawer aria-label="Fechar filtros"><span data-icone="x"></span></button>
+          </div>
+          <div class="drawer__corpo catalogo-filtros__corpo">
+            <div data-facetas></div>
+            <div class="catalogo-ajuda">
+              <span class="catalogo-ajuda__icone" data-icone="ruler"></span>
+              <strong>Na dúvida da medida?</strong>
+              <p>Manda uma foto do vão com a trena no WhatsApp. A gente confere com você e indica o modelo certo.</p>
+              <a class="btn btn--wa btn--sm btn--block" data-whats-link="Oi! Estou no catálogo do site e quero ajuda para escolher a medida certa." href="#" target="_blank" rel="noopener"><span data-icone="whatsapp"></span>Chamar no WhatsApp</a>
+            </div>
+          </div>
+          <div class="drawer__rodape catalogo-filtros__rodape">
+            <button type="button" class="btn btn--outline" data-limpar-filtros>Limpar</button>
+            <button type="button" class="btn btn--dark" data-fechar-drawer data-ver-produtos>Ver produtos</button>
+          </div>
+        </aside>
+      </div>
+
+      <!-- RESULTADOS -->
+      <section class="catalogo__resultados" aria-labelledby="titulo-resultados">
+        <h2 class="sr-only" id="titulo-resultados">Produtos encontrados</h2>
+
+        <div class="catalogo-barra">
+          <p class="catalogo-barra__contagem" data-contagem tabindex="-1" aria-live="polite"></p>
+          <div class="catalogo-barra__acoes">
+            <button type="button" class="btn btn--outline catalogo-barra__filtrar" data-abrir-filtros aria-controls="filtros" aria-expanded="false">
+              <span data-icone="filter"></span>Filtrar<span class="catalogo-barra__badge" data-filtros-qtd hidden></span>
+            </button>
+            <div class="catalogo-ordem">
+              <label for="catalogo-ordem">Ordenar por</label>
+              <select id="catalogo-ordem" class="select" data-ordem></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalogo-chips" data-chips hidden></div>
+
+        <div class="grade-produtos catalogo-grade" data-grade></div>
+
+        <div class="catalogo-paginacao" data-paginacao hidden></div>
+
+        <div data-vazio hidden></div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <div id="aura-footer"></div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# configuração local do editor/Claude
+.claude/
+
+# arquivos do sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# dependências e temporários
+node_modules/
+*.log

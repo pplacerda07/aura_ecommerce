@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Central de ajuda | Aura</title>
+  <meta name="description" content="Tire suas dúvidas sobre como comprar, como medir o vão, entrega e frete, retirada, instalação, garantia, trocas, formas de pagamento e desconto por volume na Aura.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Aura">
+  <meta property="og:title" content="Central de ajuda | Aura">
+  <meta property="og:description" content="Medida, frete, pagamento, garantia e troca explicados sem letra miúda. E se ficar dúvida, a gente responde no WhatsApp.">
+  <meta property="og:url" content="https://auravidros.com.br/ajuda.html">
+  <meta property="og:image" content="https://auravidros.com.br/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aura: janelas, portas e box de vidro">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/paginas/institucional.css">
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/produtos.js"></script>
+  <script defer src="assets/js/core.js"></script>
+  <script defer src="assets/js/ui.js"></script>
+  <script defer src="assets/js/paginas/institucional.js"></script>
+</head>
+<body data-pagina="ajuda">
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <div id="aura-header"></div>
+
+  <main id="conteudo">
+
+    <div class="container">
+      <nav class="migalhas" aria-label="Você está aqui">
+        <ol>
+          <li><a href="index.html">Início</a></li>
+          <li><span aria-current="page">Central de ajuda</span></li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- TOPO COM BUSCA -->
+    <section class="pagina-topo ajuda-topo" aria-labelledby="titulo-ajuda">
+      <div class="container ajuda-topo__inner">
+        <div class="ajuda-topo__texto">
+          <span class="eyebrow"><i class="tz"></i>Atendimento Aura</span>
+          <h1 id="titulo-ajuda">Central de ajuda</h1>
+          <p>Medida, frete, pagamento, garantia e troca. Está tudo explicado aqui, sem letra miúda. Se ainda ficar alguma dúvida, a gente responde no WhatsApp.</p>
+        </div>
+        <form class="ajuda-busca" role="search" data-ajuda-busca novalidate>
+          <label class="ajuda-busca__rotulo" for="ajuda-busca-campo">Qual é a sua dúvida?</label>
+          <div class="ajuda-busca__campo">
+            <span class="ajuda-busca__lupa" data-icone="search"></span>
+            <input id="ajuda-busca-campo" class="input" type="search" name="duvida" placeholder="Busque por medida, frete, Pix, garantia..." autocomplete="off" enterkeyhint="search" aria-describedby="ajuda-busca-status">
+            <button type="button" class="ajuda-busca__limpar" data-ajuda-limpar aria-label="Limpar busca" hidden><span data-icone="x"></span></button>
+          </div>
+          <div class="ajuda-busca__status" id="ajuda-busca-status" role="status" aria-live="polite"></div>
+          <div class="ajuda-busca__sugestoes">
+            <span>Mais procurados:</span>
+            <button type="button" class="chip" data-ajuda-sugestao="medir">Como medir</button>
+            <button type="button" class="chip" data-ajuda-sugestao="prazo">Prazo de entrega</button>
+            <button type="button" class="chip" data-ajuda-sugestao="pix">Pix</button>
+            <button type="button" class="chip" data-ajuda-sugestao="garantia">Garantia</button>
+            <button type="button" class="chip" data-ajuda-sugestao="devolução">Devolução</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- TEMAS RÁPIDOS -->
+    <section class="ajuda-temas-secao" aria-labelledby="titulo-temas" data-ajuda-temas>
+      <div class="container">
+        <h2 class="ajuda-temas__titulo" id="titulo-temas">Escolha um tema</h2>
+        <ul class="ajuda-temas">
+          <li><a class="ajuda-tema" href="#como-comprar"><span class="ajuda-tema__icone" data-icone="bag"></span><strong>Como comprar</strong><span class="ajuda-tema__desc">Do carrinho ao WhatsApp em poucos passos</span></a></li>
+          <li><a class="ajuda-tema" href="#como-medir"><span class="ajuda-tema__icone" data-icone="ruler"></span><strong>Como medir o vão</strong><span class="ajuda-tema__desc">Acerte a medida em dois minutos</span></a></li>
+          <li><a class="ajuda-tema" href="#entrega-e-frete"><span class="ajuda-tema__icone" data-icone="truck"></span><strong>Entrega e frete</strong><span class="ajuda-tema__desc">Prazos e valores por região</span></a></li>
+          <li data-se-retirada><a class="ajuda-tema" href="#retirada"><span class="ajuda-tema__icone" data-icone="store"></span><strong>Retirada na loja</strong><span class="ajuda-tema__desc">Sem frete, direto com a gente</span></a></li>
+          <li><a class="ajuda-tema" href="#instalacao"><span class="ajuda-tema__icone" data-icone="tool"></span><strong>Instalação</strong><span class="ajuda-tema__desc">Passo a passo e dicas da equipe</span></a></li>
+          <li><a class="ajuda-tema" href="#garantia"><span class="ajuda-tema__icone" data-icone="shield"></span><strong>Garantia</strong><span class="ajuda-tema__desc">O que cobre e como acionar</span></a></li>
+          <li><a class="ajuda-tema" href="#trocas-e-devolucoes"><span class="ajuda-tema__icone" data-icone="refresh"></span><strong>Trocas e devoluções</strong><span class="ajuda-tema__desc">Arrependimento, avarias e trocas</span></a></li>
+          <li><a class="ajuda-tema" href="#pagamento"><span class="ajuda-tema__icone" data-icone="card"></span><strong>Pagamento</strong><span class="ajuda-tema__desc">Pix, cartão de crédito e boleto</span></a></li>
+          <li data-se-volume><a class="ajuda-tema ajuda-tema--destaque" href="#desconto-por-volume"><span class="ajuda-tema__icone" data-icone="percent"></span><strong>Desconto por volume</strong><span class="ajuda-tema__desc" data-preencher>Acima de {volumeAcimaDe} itens, {volumePercentual}% de desconto</span></a></li>
+          <li><a class="ajuda-tema" href="#contato"><span class="ajuda-tema__icone" data-icone="chat"></span><strong>Fale com a gente</strong><span class="ajuda-tema__desc">WhatsApp, telefone e e-mail</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="container ajuda-layout">
+
+      <!-- ÍNDICE (lateral no computador, chips no celular) -->
+      <nav class="ajuda-indice" aria-label="Tópicos da central de ajuda">
+        <p class="ajuda-indice__titulo">Nesta página</p>
+        <ul class="ajuda-indice__lista">
+          <li><a href="#como-comprar" data-indice="como-comprar" data-icone="bag">Como comprar</a></li>
+          <li><a href="#como-medir" data-indice="como-medir" data-icone="ruler">Como medir</a></li>
+          <li><a href="#entrega-e-frete" data-indice="entrega-e-frete" data-icone="truck">Entrega e frete</a></li>
+          <li data-se-retirada><a href="#retirada" data-indice="retirada" data-icone="store">Retirada</a></li>
+          <li><a href="#instalacao" data-indice="instalacao" data-icone="tool">Instalação</a></li>
+          <li><a href="#garantia" data-indice="garantia" data-icone="shield">Garantia</a></li>
+          <li><a href="#trocas-e-devolucoes" data-indice="trocas-e-devolucoes" data-icone="refresh">Trocas e devoluções</a></li>
+          <li><a href="#pagamento" data-indice="pagamento" data-icone="card">Pagamento</a></li>
+          <li data-se-volume><a href="#desconto-por-volume" data-indice="desconto-por-volume" data-icone="percent">Desconto por volume</a></li>
+          <li><a href="#contato" data-indice="contato" data-icone="chat">Contato</a></li>
+        </ul>
+        <div class="ajuda-indice__wa">
+          <strong>Não achou sua resposta?</strong>
+          <span>Nossa equipe responde no WhatsApp em horário comercial.</span>
+          <a class="btn btn--wa btn--sm btn--block" data-whats-link="Oi! Estou na central de ajuda e fiquei com uma dúvida." href="#" target="_blank" rel="noopener"><span data-icone="whatsapp"></span>Chamar no WhatsApp</a>
+        </div>
+      </nav>
+
+      <div class="ajuda-conteudo">
+
+        <!-- SEM RESULTADO NA BUSCA -->
+        <div class="vazio ajuda-vazio" data-ajuda-vazio hidden>
+          <span data-icone="search" class="ajuda-vazio__icone"></span>
+          <p class="vazio__titulo">Nenhum resultado para “<span data-ajuda-termo></span>”</p>
+          <p>Tente outra palavra, como medida, frete ou Pix. Ou pergunte direto para a gente: quem responde é gente de verdade.</p>
+          <div class="ajuda-vazio__acoes">
+            <a class="btn btn--wa" data-ajuda-vazio-wa data-whats-link="Oi! Não encontrei a resposta da minha dúvida na central de ajuda. Pode me ajudar?" href="#" target="_blank" rel="noopener"><span data-icone="whatsapp"></span>Perguntar no WhatsApp</a>
+            <button type="button" class="btn btn--ghost" data-ajuda-limpar-vazio>Limpar busca</button>
+          </div>
+        </div>
+
+        <!-- COMO COMPRAR -->
+        <section class="ajuda-secao" id="como-comprar" aria-labelledby="t-como-comprar" data-ajuda-secao data-palavras="comprar compra pedido carrinho checkout finalizar fechar conta cadastro">
+          <header class="ajuda-secao__cabeca" data-icone="bag">
+            <div>
+              <h2 id="t-como-comprar">Como comprar</h2>
+              <p>Comprar na Aura é rápido, e você conversa com gente de verdade antes de pagar qualquer coisa.</p>
+            </div>
+          </header>
+          <ol class="ajuda-passos" data-ajuda-item>
+            <li><strong>Escolha o modelo e a medida</strong><p>Navegue pelo catálogo, use os filtros e selecione a medida do seu vão. O preço aparece na hora<span data-se-pix>, já com o valor no Pix</span>.</p></li>
+            <li><strong>Monte o seu carrinho</strong><p>Junte tudo o que a obra precisa.<span data-se-volume data-preencher> Acima de {volumeAcimaDe} itens, o desconto por volume entra sozinho.</span></p></li>
+            <li><strong>Preencha os seus dados</strong><p>No fechamento, você informa nome, WhatsApp, CEP, como quer receber e como prefere pagar. Não precisa criar conta nem senha.</p></li>
+            <li class="is-wa"><strong>Seu pedido vai para o WhatsApp</strong><p>Com um clique, o pedido abre no WhatsApp com o resumo completo: produtos, medidas, quantidades, descontos, frete estimado e total. É só enviar.</p></li>
+            <li><strong>A equipe confirma tudo com você</strong><p>A gente confere as medidas, confirma frete e prazo e envia o link ou os dados de pagamento. Sem pressão e sem letra miúda.</p></li>
+            <li><strong>Receba pronto para instalar</strong><p>Embalamos com proteção reforçada e enviamos com seguro.<span data-se-retirada> Se preferir, você retira com a gente, sem pagar frete.</span></p></li>
+          </ol>
+          <div class="acordeao" data-ajuda-grupo>
+            <details data-ajuda-item>
+              <summary>Preciso criar uma conta para comprar?</summary>
+              <div class="acordeao__conteudo"><p>Não. Você só preenche os seus dados no fechamento e o pedido vai direto para o nosso WhatsApp.</p></div>
+            </details>
+            <details data-ajuda-item>
+              <summary>Posso comprar direto pelo WhatsApp?</summary>
+              <div class="acordeao__conteudo"><p>Pode, sim. Todo produto tem um botão de WhatsApp. Você manda o produto que gostou, a gente monta o pedido com você e tira todas as dúvidas no caminho.</p></div>
+            </details>
+            <details data-ajuda-item>
+              <summary>Quando o meu pedido fica confirmado?</summary>
+              <div class="acordeao__conteudo"><p>Depois que a nossa equipe responde no WhatsApp, confirma frete e prazo com você e o pagamento é feito. Antes disso, nada é cobrado.</p></div>
+            </details>
+          </div>
+        </section>
+
+        <!-- COMO MEDIR -->
+        <section class="ajuda-secao" id="como-medir" aria-labelledby="t-como-medir" data-ajuda-secao data-palavras="medir medida medidas trena vao folga largura altura tamanho centimetros">
+          <header class="ajuda-secao__cabeca" data-icone="ruler">
+            <div>
+              <h2 id="t-como-medir">Como medir o vão</h2>
+              <p>Dois minutos e uma trena. Com a medida certa, a peça encaixa sem quebra-quebra.</p>
+            </div>
+          </header>
+          <div class="ajuda-duas" data-ajuda-item>
+            <article class="ajuda-ilustra">
+              <div data-mockup="Ilustração: medindo a largura" data-ratio="4/3"></div>
+              <div class="ajuda-ilustra__corpo">
+                <span class="ajuda-ilustra__num">Passo 1</span>
+                <h3>Largura: meça em três pontos</h3>
+                <p>Em cima, no meio e embaixo do vão. Anote a menor das três medidas.</p>
+              </div>
+            </article>
+            <article class="ajuda-ilustra">
+              <div data-mockup="Ilustração: medindo a altura" data-ratio="4/3"></div>
+              <div class="ajuda-ilustra__corpo">
+                <span class="ajuda-ilustra__num">Passo 2</span>
+                <h3>Altura: meça em três pontos</h3>
+                <p>Na esquerda, no centro e na direita. Aqui também vale a menor.</p>
+              </div>
+            </article>
+          </div>
+          <div class="ajuda-cartao" data-ajuda-item>
+            <h3>Por que medir em três pontos?</h3>
+            <p>Parede quase nunca é perfeitamente reta. Medindo em três pontos e ficando com a menor medida, você garante que a peça passa no vão em toda a extensão, sem precisar quebrar nada.</p>
+          </div>
+          <div class="ajuda-regra" data-ajuda-item>
+            <div class="ajuda-regra__texto">
+              <h3>Qual medida escolher</h3>
+              <p data-preencher>{regraMedida}</p>
+              <p>Mediu 120&nbsp;x&nbsp;100&nbsp;cm? Leve 1,20&nbsp;x&nbsp;1,00&nbsp;m. Mediu 121&nbsp;x&nbsp;102&nbsp;cm? Também leve 1,20&nbsp;x&nbsp;1,00&nbsp;m. Nunca escolha uma medida maior que o vão.</p>
+            </div>
+            <div class="ajuda-regra__exemplo">
+              <div><small>Seu vão mediu</small><strong>121 x 102 cm</strong></div>
+              <span class="ajuda-regra__seta" data-icone="arrow"></span>
+              <div class="is-escolha"><small>Escolha a medida</small><strong>1,20 x 1,00 m</strong></div>
+            </div>
+          </div>
+          <div class="ajuda-bloco" data-ajuda-item>
+            <h3>Dicas de quem mede vão todo dia</h3>
+            <ul class="lista-tz">
+              <li><strong>Meça o vão acabado.</strong> Ou seja, com o reboco pronto. Se a parede ainda vai ser rebocada, espere essa etapa ou desconte a espessura do reboco.</li>
+              <li><strong>Confira nível e prumo.</strong> Passe um nível de bolha na base e nas laterais. Vão muito torto deve ser corrigido antes da instalação.</li>
+              <li><strong>Anote sempre largura x altura.</strong> Nessa ordem e em centímetros. No site as medidas aparecem em metros: 120&nbsp;x&nbsp;100&nbsp;cm é a medida 1,20&nbsp;x&nbsp;1,00&nbsp;m.</li>
+              <li data-se-volume data-preencher><strong>Conte os vãos repetidos.</strong> Três quartos com a mesma janela? Acima de {volumeAcimaDe} itens, o desconto por volume entra sozinho.</li>
+            </ul>
+          </div>
+          <div class="aviso-box aviso-box--atencao" data-ajuda-item>
+            <span data-icone="info"></span>
+            <div><strong>Quando pedir sob medida.</strong> Se a diferença entre o seu vão e a medida mais próxima do site passar de 5 cm, ou se o vão não puder ser ajustado, fale com a gente antes de comprar. A equipe avalia o seu caso e indica a melhor solução.</div>
+          </div>
+          <div class="ajuda-wa" data-ajuda-item>
+            <div>
+              <strong>Ainda ficou na dúvida?</strong>
+              <p>Manda uma foto do vão com a trena aparecendo. A gente confere a medida com você antes da compra.</p>
+            </div>
+            <a class="btn btn--wa" data-whats-link="Oi! Quero ajuda para conferir a medida. Posso mandar uma foto do vão com a trena?" href="#" target="_blank" rel="noopener"><span data-icone="whatsapp"></span>Mandar foto do vão</a>
+          </div>
+        </section>
+
+        <!-- ENTREGA E FRETE -->
+        <section class="ajuda-secao" id="entrega-e-frete" aria-labelledby="t-entrega" data-ajuda-secao data-palavras="entrega frete prazo envio transporte cep regiao chegar receber rastreio seguro embalagem">
+          <header class="ajuda-secao__cabeca" data-icone="truck">
+            <div>
+              <h2 id="t-entrega">Entrega e frete</h2>
+              <p>Entregamos em todo o Brasil, com seguro e embalagem reforçada. Confira a estimativa para a sua região.</p>
+            </div>
+          </header>
+          <div class="ajuda-bloco" data-ajuda-item>
+            <div class="ajuda-tabela-wrap" data-tabela-frete></div>
+            <p class="ajuda-nota">O valor e o prazo aparecem no carrinho quando você informa o CEP. São estimativas pela região, e a nossa equipe confirma tudo no WhatsApp antes de qualquer pagamento.</p>
+          </div>
+          <div class="aviso-box aviso-box--sucesso" data-ajuda-item data-se-frete-gratis>
+            <span data-icone="truck"></span>
+            <div><strong>Frete grátis em pedidos a partir de <span data-frete-gratis></span>.</strong> Vale para entrega em qualquer região atendida. A conta é feita sobre o total dos produtos<span data-se-volume>, já com o desconto por volume</span>, sem somar o frete.<span data-se-pix> Pagar no Pix não faz você perder o frete grátis.</span></div>
+          </div>
+          <div class="aviso-box" data-ajuda-item>
+            <span data-icone="clock"></span>
+            <div data-preencher><strong>Pronta entrega<span data-se-encomenda> e sob encomenda</span>.</strong> Itens de pronta entrega saem da fábrica em {prazoProntaEntrega}.<span data-se-encomenda> Itens sob encomenda são feitos depois do pedido: conte com {prazoSobEncomenda}.</span> Depois disso, conta o prazo de transporte da sua região.<span data-se-encomenda> A página de cada produto mostra quais medidas estão em estoque e quais são sob encomenda, e o pedido no WhatsApp também avisa.</span></div>
+          </div>
+          <div class="acordeao" data-ajuda-grupo>
+            <details data-ajuda-item>
+              <summary>Como a peça é embalada?</summary>
+              <div class="acordeao__conteudo"><p>Cada peça sai com cantoneiras nos cantos, filme protetor e papelão reforçado. Todos os envios têm seguro contra avarias no transporte.</p></div>
+            </details>
+            <details data-ajuda-item>
+              <summary>O que eu confiro na hora de receber?</summary>
+              <div class="acordeao__conteudo"><p>Confira a embalagem na frente do entregador. Se notar caixa amassada, rasgada ou molhada, anote no comprovante de entrega antes de assinar e tire fotos.</p><p>Depois, fale com a gente no WhatsApp com o número do pedido. A gente resolve com você.</p></div>
+            </details>
+            <details data-ajuda-item>
+              <summary>O frete do site é o valor final?</summary>
+              <div class="acordeao__conteudo"><p>O valor do site é uma estimativa pela região do seu CEP. O frete exato e o prazo são confirmados pela nossa equipe no WhatsApp, junto com o seu pedido, antes de qualquer pagamento.</p></div>
+            </details>
+            <details data-ajuda-item>
+              <summary>Quando o prazo de entrega começa a contar?</summary>
+              <div class="acordeao__conteudo"><p>Depois da confirmação do pedido e do pagamento. Primeiro vem o prazo para a peça sair da fábrica<span data-se-encomenda> (ou de fabricação, nos itens sob encomenda)</span>. Depois entra o prazo de transporte.</p></div>
+            </details>
+          </div>
+        </section>
+
+        <!-- RETIRADA -->
+        <section class="ajuda-secao" id="retirada" aria-labelledby="t-retirada" data-ajuda-secao data-se-retirada data-palavras="retirada retirar buscar loja pegar balcao sem frete">
+          <header class="ajuda-secao__cabeca" data-icone="store">
+            <div>
+              <h2 id="t-retirada">Retirada na loja</h2>
+              <p>Mora perto ou tem pressa? Retire o seu pedido direto com a gente, sem pagar frete.</p>
+            </div>
+          </header>
+          <div class="ajuda-retirada" data-ajuda-item data-retirada></div>
+          <div class="ajuda-bloco" data-ajuda-item>
+            <h3>Como funciona a retirada</h3>
+            <ul class="lista-check">
+              <li data-icone="check">No fechamento do pedido, escolha a opção de retirada.</li>
+              <li data-icone="check">Espere a confirmação da equipe no WhatsApp avisando que está tudo pronto.</li>
+              <li data-icone="check">Leve o número do pedido e um documento com foto.</li>
+              <li data-icone="check">Venha com um veículo que comporte as peças. Porta e janela grande não cabem em carro pequeno.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- INSTALAÇÃO -->
+        <section class="ajuda-secao" id="instalacao" aria-labelledby="t-instalacao" data-ajuda-secao data-palavras="instalar instalacao instalador serralheiro pedreiro montar fixar kit">
+          <header class="ajuda-secao__cabeca" data-icone="tool">
+            <div>
+              <h2 id="t-instalacao">Instalação</h2>
+              <p>Janelas e portas chegam montadas e o box chega em kit completo. A instalação não está inclusa, mas a gente te ajuda em cada etapa.</p>
+            </div>
+          </header>
+          <div class="aviso-box aviso-box--atencao" data-ajuda-item>
+            <span data-icone="info"></span>
+            <div><strong>A instalação não está inclusa no preço.</strong> Janelas e portas chegam montadas, com vidro e acessórios no lugar. O box chega em kit completo, com vidros, perfis, roldanas e acessórios. Tudo pronto para qualquer serralheiro, pedreiro ou instalador de confiança.</div>
+          </div>
+          <div class="ajuda-bloco" data-ajuda-item>
+            <h3>Visão geral da instalação de janelas e portas</h3>
+            <ol class="ajuda-passos ajuda-passos--compacto">
+              <li><strong>Confira o vão</strong><p>Largura, altura, nível e prumo, antes de abrir a embalagem.</p></li>
+              <li><strong>Posicione a peça</strong><p>Encaixe no vão com calços, deixando a folga distribuída por igual nos lados.</p></li>
+              <li><strong>Fixe</strong><p>Use os parafusos e buchas que acompanham o produto, conferindo nível e esquadro a cada ponto.</p></li>
+              <li><strong>Vede e finalize</strong><p>Aplique espuma ou silicone no contorno e termine com o acabamento da parede.</p></li>
+              <li><strong>Teste</strong><p>Abra e feche várias vezes antes de tirar a proteção. Tudo tem que correr leve.</p></li>
+            </ol>
+          </div>
+          <div class="ajuda-bloco" data-ajuda-item>
+            <h3>Recomendações da nossa equipe</h3>
+            <ul class="lista-tz">
+              <li><strong>Chame um profissional.</strong> De preferência alguém com experiência em esquadrias de alumínio. Uma instalação bem feita garante vedação e vida longa à peça.</li>
+              <li><strong>Guarde a embalagem até o fim da obra.</strong> Papelão, cantoneiras e filme protegem a peça de respingos de massa, tinta e batidas. Tire só quando a obra acabar.</li>
+              <li><strong>No box, perfis primeiro e vidros depois.</strong> Fixe os perfis com os parafusos e as buchas do kit e só então coloque os vidros e as roldanas.</li>
+              <li><strong>Siga o guia que vem na caixa.</strong> Ele mostra o passo a passo do seu modelo.</li>
+            </ul>
+          </div>
+          <div class="ajuda-wa" data-ajuda-item>
+            <div>
+              <strong>Travou em alguma etapa?</strong>
+              <p>Manda foto ou vídeo no WhatsApp. A nossa equipe orienta você ou o seu instalador.</p>
+            </div>
+            <a class="btn btn--wa" data-whats-link="Oi! Estou instalando um produto da Aura e preciso de uma orientação." href="#" target="_blank" rel="noopener"><span data-icone="whatsapp"></span>Pedir ajuda na instalação</a>
+          </div>
+          <div class="acordeao" data-ajuda-grupo>
+            <details data-ajuda-item>
+              <summary>Instalação errada perde a garantia?</summary>
+              <div class="acordeao__conteudo"><p>Problemas causados por instalação incorreta não são cobertos pela garantia. Por isso vale tanto a pena contar com um profissional e seguir o guia de instalação.</p></div>
+            </details>
+          </div>
+        </section>
+
+        <!-- GARANTIA -->
+        <section class="ajuda-secao" id="garantia" aria-labelledby="t-garantia" data-ajuda-secao data-palavras="garantia defeito conserto reparo assistencia problema quebrou">
+          <header class="ajuda-secao__cabeca" data-icone="shield">
+            <div>
+              <h2 id="t-garantia">Garantia</h2>
+              <p>Todo produto Aura tem garantia de fábrica contra defeitos de fabricação. O prazo conta a partir do dia em que você recebe ou retira o pedido.</p>
+            </div>
+          </header>
+          <ul class="ajuda-garantias" data-ajuda-item data-garantias aria-label="Prazo de garantia por linha"></ul>
+          <div class="ajuda-cobre" data-ajuda-item>
+            <div class="ajuda-cobre__sim">
+              <h3>O que a garantia cobre</h3>
+              <ul class="lista-check">
+                <li data-icone="check">Defeitos de fabricação no perfil, na pintura ou na montagem</li>
+                <li data-icone="check">Roldanas, fechos e acessórios que falharem em uso normal</li>
+                <li data-icone="check">Problemas de vedação que vieram de fábrica</li>
+              </ul>
+            </div>
+            <div class="ajuda-cobre__nao">
+              <h3>O que não está coberto</h3>
+              <ul class="lista-check lista-x">
+                <li data-icone="x">Instalação incorreta ou vão fora de nível e prumo</li>
+                <li data-icone="x">Mau uso, força excessiva ou alterações na peça</li>
+                <li data-icone="x">Impactos, quedas e quebra de vidro depois do recebimento</li>
+                <li data-icone="x">Limpeza com produtos abrasivos, cimento ou ácido</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ajuda-bloco" data-ajuda-item>
+            <h3>Como acionar a garantia</h3>
+            <ol class="ajuda-passos ajuda-passos--compacto">
+              <li><strong>Registre o problema</strong><p>Tire fotos e, se der, um vídeo curto mostrando o que está acontecendo.</p></li>
+              <li class="is-wa"><strong>Mande no WhatsApp</strong><p>Envie as fotos junto com o número do seu pedido.</p></li>
+              <li><strong>A gente resolve</strong><p>A equipe analisa e responde com a solução: ajuste, troca da peça ou reparo.</p></li>
+            </ol>
+            <div>
+              <a class="btn btn--wa" data-whats-link="Oi! Preciso acionar a garantia. O número do meu pedido é:" href="#" target="_blank" rel="noopener"><span data-icone="whatsapp"></span>Acionar a garantia</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- TROCAS E DEVOLUÇÕES -->
+        <!-- Nota para o dono da loja: revise esta política de trocas e devoluções com o seu advogado ou assessor jurídico antes de publicar o site. -->
+        <section class="ajuda-secao" id="trocas-e-devolucoes" aria-labelledby="t-trocas" data-ajuda-secao data-palavras="troca trocar devolucao devolver arrependimento reembolso estorno cancelar cancelamento avaria danificado">
+          <header class="ajuda-secao__cabeca" data-icone="refresh">
+            <div>
+              <h2 id="t-trocas">Trocas e devoluções</h2>
+              <p>Comprou e se arrependeu? Chegou com problema? A gente resolve com transparência.</p>
+            </div>
+          </header>
+          <div class="ajuda-cartao" data-ajuda-item>
+            <h3>Direito de arrependimento: 7 dias</h3>
+            <p>Compras feitas pela internet podem ser canceladas em até 7 dias corridos a partir do recebimento, como garante o Código de Defesa do Consumidor. É só avisar a gente no WhatsApp com o número do pedido.</p>
+          </div>
+          <div class="ajuda-bloco" data-ajuda-item>
+            <h3>Condições para devolver</h3>
+            <ul class="lista-check">
+              <li data-icone="check">Produto sem uso e sem instalação</li>
+              <li data-icone="check">Na embalagem original, com todos os acessórios e o guia</li>
+              <li data-icone="check">Sem marcas, riscos ou cortes feitos depois da entrega</li>
+            </ul>
+            <p>Com a devolução aprovada, a gente orienta como enviar o produto e o reembolso é feito pela mesma forma de pagamento da compra.</p>
+          </div>
+          <div class="acordeao" data-ajuda-grupo>
+            <details data-ajuda-item>
+              <summary>O produto chegou com avaria. E agora?</summary>
+              <div class="acordeao__conteudo"><p>Se a embalagem estiver danificada, anote no comprovante do entregador antes de assinar. Encontrou dano no produto? Fotografe e fale com a gente o quanto antes.</p><p>A gente troca ou repara, sem burocracia.</p></div>
+            </details>
+            <details data-ajuda-item>
+              <summary>Comprei a medida errada. Dá para trocar?</summary>
+              <div class="acordeao__conteudo"><p>Fale com a gente o quanto antes. Se o produto estiver sem uso e na embalagem original, a gente ajuda você a trocar pela medida certa.</p></div>
+            </details>
+            <details data-ajuda-item>
+              <summary>E os pedidos sob medida?</summary>
+              <div class="acordeao__conteudo"><p>Peças sob medida, fora das medidas do catálogo, são fabricadas especialmente para o seu vão. Antes de produzir, a gente confirma cada medida com você por escrito no WhatsApp, e as condições de troca desse tipo de pedido são combinadas nesse momento.</p></div>
+            </details>
+          </div>
+        </section>
+
+        <!-- PAGAMENTO -->
+        <section class="ajuda-secao" id="pagamento" aria-labelledby="t-pagamento" data-ajuda-secao data-palavras="pagamento pagar pix cartao credito boleto parcelar parcelas parcelamento juros link seguranca">
+          <header class="ajuda-secao__cabeca" data-icone="card">
+            <div>
+              <h2 id="t-pagamento">Formas de pagamento</h2>
+              <p>Você escolhe como pagar. A gente envia o link ou os dados de pagamento depois de confirmar o pedido com você.</p>
+            </div>
+          </header>
+          <ul class="ajuda-pagamentos" data-ajuda-item>
+            <li class="ajuda-pagamento ajuda-pagamento--pix" data-icone="pix">
+              <strong>Pix</strong>
+              <b data-se-pix data-preencher>{pix}% de desconto</b>
+              <b data-sem-pix>Aprovação na hora</b>
+              <p data-se-pix>Calculado sobre o total dos produtos<span data-se-volume>, já com o desconto por volume</span>. Aprovação na hora.</p>
+              <p data-sem-pix>Pagamento instantâneo, com a chave sempre em nome da empresa.</p>
+            </li>
+            <li class="ajuda-pagamento" data-icone="card">
+              <strong>Cartão de crédito</strong>
+              <b data-preencher>Até {parcelas}x sem juros</b>
+              <p>Visa, Mastercard, Elo, Hipercard e American Express, por link de pagamento.</p>
+            </li>
+            <li class="ajuda-pagamento"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 6v12M7 6v12M10.5 6v8M13.5 6v12M17 6v8M20 6v12M10.5 17.5v.5M17 17.5v.5"/></svg>
+              <strong>Boleto bancário</strong>
+              <b>À vista</b>
+              <p>O pedido segue para produção ou envio depois da compensação do boleto.</p>
+            </li>
+          </ul>
+          <div class="ajuda-bloco" data-ajuda-item>
+            <h3>Como funciona o pagamento</h3>
+            <p>Você finaliza o pedido no site e ele chega no nosso WhatsApp. A equipe confirma frete e prazo e envia o link do cartão, a chave Pix ou o boleto. Você só paga quando estiver tudo certo.</p>
+          </div>
+          <div class="aviso-box aviso-box--sucesso" data-ajuda-item>
+            <span data-icone="lock"></span>
+            <div><strong>Pagamento seguro.</strong> A gente nunca pede senha do cartão nem código de segurança por mensagem. Os dados do Pix e do boleto são sempre em nome de <span data-empresa="razaoSocial">Aura Vidros e Esquadrias Ltda.</span>, CNPJ <span data-empresa="cnpj">00.000.000/0001-00</span>. Confira antes de pagar.</div>
+          </div>
+          <div class="acordeao" data-ajuda-grupo>
+            <details data-ajuda-item data-se-volume data-se-pix>
+              <summary>O desconto do Pix soma com o desconto por volume?</summary>
+              <div class="acordeao__conteudo"><p>Soma, sim. Primeiro entra o desconto por volume. Depois, o desconto do Pix é calculado em cima do total que já está com desconto.</p></div>
+            </details>
+            <details data-ajuda-item data-se-pix>
+              <summary>O desconto do Pix vale para o frete?</summary>
+              <div class="acordeao__conteudo"><p>O desconto do Pix vale sobre o valor dos produtos. O frete é cobrado à parte, sem desconto.</p></div>
+            </details>
+          </div>
+        </section>
+
+        <!-- DESCONTO POR VOLUME -->
+        <section class="ajuda-secao" id="desconto-por-volume" aria-labelledby="t-volume" data-ajuda-secao data-se-volume data-palavras="desconto volume quantidade atacado obra itens unidades combinacao automatico cupom">
+          <header class="ajuda-secao__cabeca" data-icone="percent">
+            <div>
+              <h2 id="t-volume">Desconto por volume</h2>
+              <p data-preencher>Acima de {volumeAcimaDe} <span data-volume-unidade>itens</span> no carrinho, você ganha {volumePercentual}% de desconto em todo o pedido. Automático e sem cupom.</p>
+            </div>
+          </header>
+          <div class="ajuda-bloco" data-ajuda-item>
+            <h3>Faixas de desconto</h3>
+            <div class="ajuda-tabela-wrap" data-faixas-volume></div>
+          </div>
+          <div class="ajuda-bloco" data-ajuda-item>
+            <h3>Como a regra funciona</h3>
+            <ul class="lista-check" data-regras-volume></ul>
+          </div>
+          <div class="ajuda-exemplo" data-ajuda-item data-exemplo-volume></div>
+          <div class="ajuda-wa ajuda-wa--claro" data-ajuda-item>
+            <div>
+              <strong>Pronto para montar o seu pedido?</strong>
+              <p>Junte tudo o que a obra precisa no carrinho. O desconto aparece sozinho.</p>
+            </div>
+            <a class="btn btn--accent" href="catalogo.html">Montar meu pedido <span data-icone="arrow"></span></a>
+          </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="ajuda-secao" id="contato" aria-labelledby="t-contato" data-ajuda-secao data-palavras="contato falar telefone ligar email endereco horario whatsapp atendimento mapa">
+          <header class="ajuda-secao__cabeca" data-icone="chat">
+            <div>
+              <h2 id="t-contato">Fale com a gente</h2>
+              <p>Do jeito que você preferir. Quem responde é gente de verdade, que entende de obra.</p>
+            </div>
+          </header>
+          <div class="ajuda-contatos" data-ajuda-item data-contatos>
+            <a class="ajuda-contato ajuda-contato--wa" data-whats-link="Oi! Vim pela central de ajuda e queria falar com a equipe." href="#" target="_blank" rel="noopener">
+              <span data-icone="whatsapp"></span>
+              <div><small>WhatsApp</small><strong>Chamar agora</strong><em data-wa-status>O jeito mais rápido</em></div>
+            </a>
+          </div>
+          <div class="ajuda-mapa" data-ajuda-item>
+            <div data-mockup="Mapa da loja" data-ratio="16/7"></div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+  </main>
+
+  <div id="aura-footer"></div>
+</body>
+</html>

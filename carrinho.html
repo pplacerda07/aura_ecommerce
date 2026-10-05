@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrinho | Aura</title>
+  <meta name="description" content="Revise os itens, calcule o frete pelo CEP e envie o seu pedido pelo WhatsApp. A equipe da Aura confirma prazo e pagamento com você.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Aura">
+  <meta property="og:title" content="Carrinho | Aura">
+  <meta property="og:description" content="Monte o seu pedido, veja o desconto por volume na hora e finalize pelo WhatsApp com gente de verdade.">
+  <meta property="og:image" content="https://auravidros.com.br/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aura: janelas, portas e box de vidro">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/paginas/carrinho.css">
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/produtos.js"></script>
+  <script defer src="assets/js/core.js"></script>
+  <script defer src="assets/js/ui.js"></script>
+  <script defer src="assets/js/paginas/carrinho.js"></script>
+</head>
+<body data-pagina="carrinho">
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+  <div id="aura-header"></div>
+
+  <main id="conteudo">
+
+    <div class="container">
+      <nav class="migalhas" aria-label="Você está aqui">
+        <ol>
+          <li><a href="index.html">Início</a></li>
+          <li><span aria-current="page">Carrinho</span></li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- TOPO: título, texto de apoio e etapas (muda conforme o estado: cheio, vazio ou pedido pronto) -->
+    <header class="container carrinho-topo" data-topo>
+      <div class="carrinho-topo__texto">
+        <span class="carrinho-topo__check" data-topo-check hidden></span>
+        <span class="eyebrow"><i class="tz"></i><span data-topo-eyebrow>Seu pedido</span></span>
+        <h1 id="titulo-pagina" tabindex="-1" data-topo-titulo>Seu carrinho</h1>
+        <p class="carrinho-topo__lead" data-topo-lead>Confira os itens, preencha seus dados e mande o pedido pelo WhatsApp. Nossa equipe confirma frete, prazo e pagamento com você antes de qualquer cobrança.</p>
+      </div>
+      <ol class="etapas" aria-label="Etapas do pedido" data-etapas>
+        <li class="etapa is-atual" aria-current="step">
+          <span class="etapa__num" data-icone="check" aria-hidden="true"><b>1</b></span>
+          <span class="etapa__txt">Carrinho<span class="sr-only" data-etapa-status></span></span>
+        </li>
+        <li class="etapa">
+          <span class="etapa__num" data-icone="check" aria-hidden="true"><b>2</b></span>
+          <span class="etapa__txt">Seus dados<span class="sr-only" data-etapa-status></span></span>
+        </li>
+        <li class="etapa">
+          <span class="etapa__num" data-icone="check" aria-hidden="true"><b>3</b></span>
+          <span class="etapa__txt">Enviar no WhatsApp<span class="sr-only" data-etapa-status></span></span>
+        </li>
+      </ol>
+    </header>
+
+    <noscript>
+      <div class="container carrinho-noscript">
+        <p class="aviso-box aviso-box--atencao">Para ver o carrinho e enviar o pedido, ative o JavaScript do navegador.</p>
+      </div>
+    </noscript>
+
+    <!-- CARRINHO COM ITENS -->
+    <div class="container carrinho" data-vista="cheio" hidden>
+      <!-- aparece só quando o navegador bloqueia os dados salvos (preenchido pelo carrinho.js) -->
+      <div class="aviso-box aviso-box--atencao carrinho__aviso" data-aviso-armazenamento role="status" hidden></div>
+      <div class="carrinho__grid">
+
+        <!-- itens -->
+        <section class="carrinho__bloco carrinho__itens" id="itens" aria-labelledby="titulo-itens">
+          <div class="carrinho__cabeca">
+            <h2 id="titulo-itens" tabindex="-1">Itens do pedido <span data-qtd-itens></span></h2>
+          </div>
+          <div class="carrinho__volume" data-volume aria-live="polite"></div>
+          <ul class="itens" data-itens></ul>
+          <div class="itens__rodape">
+            <a class="btn btn--ghost btn--sm itens__continuar" href="catalogo.html" data-icone="left">Continuar comprando</a>
+            <button type="button" class="btn btn--ghost btn--sm itens__esvaziar" data-esvaziar data-icone="trash">Esvaziar carrinho</button>
+          </div>
+        </section>
+
+        <!-- resumo -->
+        <aside class="carrinho__lateral" aria-labelledby="titulo-resumo" data-lateral>
+          <div class="resumo">
+            <h2 id="titulo-resumo" class="resumo__titulo">Resumo do pedido</h2>
+            <dl class="totais resumo__totais" data-totais></dl>
+            <p class="resumo__parcela" data-parcela></p>
+            <div class="resumo__notas" data-frete-info></div>
+            <form class="resumo__cep" data-cep-resumo novalidate>
+              <label for="resumo-cep">Calcule o frete</label>
+              <div class="resumo__cep-linha">
+                <input class="input" id="resumo-cep" name="resumo-cep" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" aria-describedby="resumo-cep-ajuda">
+                <button type="submit" class="btn btn--outline">Calcular</button>
+              </div>
+              <p class="campo__ajuda" id="resumo-cep-ajuda" aria-live="polite">Estimativa por região. O valor final a gente confirma no WhatsApp.</p>
+            </form>
+            <a class="btn btn--accent btn--lg btn--block" href="#finalizar" data-ir-finalizar>Finalizar pedido <span data-icone="arrow"></span></a>
+            <ul class="resumo__confianca">
+              <li><span class="resumo__confianca-icone" data-icone="lock"></span><div><strong>Compra segura</strong><span>Você só paga depois que a nossa equipe confirmar tudo com você.</span></div></li>
+              <li><span class="resumo__confianca-icone resumo__confianca-icone--wa" data-icone="whatsapp"></span><div><strong>Atendimento humano no WhatsApp</strong><span>Gente de verdade confere medidas, frete e prazo junto com você.</span></div></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- finalização -->
+        <section class="carrinho__bloco checkout" id="finalizar" aria-labelledby="titulo-finalizar">
+          <div class="checkout__cabeca">
+            <span class="eyebrow"><i class="tz"></i>Finalização</span>
+            <h2 id="titulo-finalizar">Finalize seu pedido</h2>
+            <p>Leva menos de um minuto. Você confere tudo, toca em enviar e o pedido chega prontinho no nosso WhatsApp.</p>
+          </div>
+
+          <form class="checkout__form" data-checkout novalidate>
+            <div class="aviso-box aviso-box--erro checkout__erros" data-erros role="alert" hidden></div>
+            <p class="checkout__obrig-nota">Campos com <span class="campo__obrig" aria-hidden="true">*</span> são obrigatórios.</p>
+
+            <!-- dados -->
+            <fieldset class="checkout__grupo">
+              <legend class="checkout__legenda"><span class="checkout__legenda-icone" data-icone="users"></span>Seus dados</legend>
+              <div class="checkout__campos">
+                <div class="campo campo--nome">
+                  <label for="f-nome">Nome completo <span class="campo__obrig" aria-hidden="true">*</span></label>
+                  <input class="input" id="f-nome" name="nome" type="text" autocomplete="name" maxlength="120" required>
+                  <p class="campo__erro" id="f-nome-erro" hidden></p>
+                </div>
+                <div class="campo campo--telefone">
+                  <label for="f-telefone">WhatsApp <span class="campo__obrig" aria-hidden="true">*</span></label>
+                  <input class="input" id="f-telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(11) 99999-9999" required aria-describedby="f-telefone-ajuda">
+                  <p class="campo__ajuda" id="f-telefone-ajuda">Com DDD. É por ele que a gente confirma o pedido.</p>
+                  <p class="campo__erro" id="f-telefone-erro" hidden></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- recebimento -->
+            <fieldset class="checkout__grupo">
+              <legend class="checkout__legenda"><span class="checkout__legenda-icone" data-icone="box"></span>Como você quer receber</legend>
+              <div class="opcoes opcoes--entrega">
+                <label class="opcao-card">
+                  <input type="radio" name="entrega" value="entrega" checked>
+                  <span class="opcao-card__txt"><strong>Entrega no endereço</strong><small>Enviamos com seguro. O frete aparece assim que você informa o CEP.</small></span>
+                  <span class="opcao-card__icone" data-icone="truck"></span>
+                </label>
+                <label class="opcao-card" data-opcao-retirada>
+                  <input type="radio" name="entrega" value="retirada">
+                  <span class="opcao-card__txt"><strong>Retirar na loja</strong><small data-retirada-resumo>Sem custo de frete.</small></span>
+                  <span class="opcao-card__icone" data-icone="store"></span>
+                </label>
+              </div>
+
+              <div class="checkout__campos checkout__endereco" data-endereco>
+                <div class="campo campo--cep">
+                  <label for="f-cep">CEP <span class="campo__obrig" aria-hidden="true">*</span></label>
+                  <input class="input" id="f-cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" required aria-describedby="f-cep-status">
+                  <p class="campo__ajuda" id="f-cep-status" aria-live="polite">A gente completa o endereço.</p>
+                  <p class="campo__erro" id="f-cep-erro" hidden></p>
+                </div>
+                <div class="campo campo--endereco">
+                  <label for="f-endereco">Endereço <span class="campo__obrig" aria-hidden="true">*</span></label>
+                  <input class="input" id="f-endereco" name="endereco" type="text" autocomplete="address-line1" maxlength="150" placeholder="Rua, avenida, travessa..." required>
+                  <p class="campo__erro" id="f-endereco-erro" hidden></p>
+                </div>
+                <div class="campo campo--numero">
+                  <label for="f-numero">Número <span class="campo__obrig" aria-hidden="true">*</span></label>
+                  <input class="input" id="f-numero" name="numero" type="text" maxlength="20" required>
+                  <p class="campo__erro" id="f-numero-erro" hidden></p>
+                </div>
+                <div class="campo campo--complemento">
+                  <label for="f-complemento">Complemento <span class="campo__opcional">(opcional)</span></label>
+                  <input class="input" id="f-complemento" name="complemento" type="text" autocomplete="address-line2" maxlength="80" placeholder="Apto, bloco, casa 2...">
+                </div>
+                <div class="campo campo--bairro">
+                  <label for="f-bairro">Bairro <span class="campo__obrig" aria-hidden="true">*</span></label>
+                  <input class="input" id="f-bairro" name="bairro" type="text" autocomplete="address-level3" maxlength="80" required>
+                  <p class="campo__erro" id="f-bairro-erro" hidden></p>
+                </div>
+                <div class="campo campo--cidade">
+                  <label for="f-cidade">Cidade <span class="campo__obrig" aria-hidden="true">*</span></label>
+                  <input class="input" id="f-cidade" name="cidade" type="text" autocomplete="address-level2" maxlength="80" required>
+                  <p class="campo__erro" id="f-cidade-erro" hidden></p>
+                </div>
+                <div class="campo campo--uf">
+                  <label for="f-uf">Estado <span class="campo__obrig" aria-hidden="true">*</span></label>
+                  <select class="select" id="f-uf" name="uf" autocomplete="address-level1" required>
+                    <option value="">UF</option>
+                  </select>
+                  <p class="campo__erro" id="f-uf-erro" hidden></p>
+                </div>
+              </div>
+
+              <div class="aviso-box checkout__retirada" data-retirada-info data-icone="pin" hidden>
+                <div>
+                  <strong>Endereço para retirada</strong>
+                  <p data-retirada-endereco></p>
+                  <p data-retirada-prazo></p>
+                  <p class="checkout__retirada-horario" data-retirada-horario></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- pagamento -->
+            <fieldset class="checkout__grupo">
+              <legend class="checkout__legenda"><span class="checkout__legenda-icone" data-icone="shield"></span>Forma de pagamento</legend>
+              <p class="checkout__ajuda">Você só paga depois que a nossa equipe confirmar o pedido com você.</p>
+              <div class="opcoes opcoes--pagamento" data-pagamentos></div>
+            </fieldset>
+
+            <!-- observações e privacidade -->
+            <div class="checkout__grupo checkout__grupo--final">
+              <div class="campo">
+                <label for="f-obs">Observações <span class="campo__opcional">(opcional)</span></label>
+                <textarea class="textarea" id="f-obs" name="observacoes" rows="3" maxlength="600" placeholder="Ex.: preciso receber até o dia 20, portão azul, ligar antes" aria-describedby="f-obs-ajuda"></textarea>
+                <p class="campo__ajuda" id="f-obs-ajuda">Qualquer detalhe que ajude a gente a te atender melhor.</p>
+              </div>
+              <div class="checkout__privacidade-bloco">
+                <label class="check"><input type="checkbox" name="lembrar"><span>Lembrar meus dados neste aparelho</span></label>
+                <p class="checkout__privacidade" data-icone="lock"><span data-privacidade-txt>Seus dados vão só na mensagem do WhatsApp. Com a opção marcada, eles ficam salvos apenas neste aparelho para agilizar a próxima compra.</span></p>
+              </div>
+            </div>
+
+            <!-- envio -->
+            <div class="checkout__envio">
+              <dl class="totais checkout__total" data-total-envio></dl>
+              <button type="submit" class="btn btn--wa btn--lg btn--block" data-enviar data-icone="whatsapp">Enviar pedido pelo WhatsApp</button>
+              <p class="checkout__nota">O WhatsApp abre com o pedido completo. É só tocar em enviar. Nada é cobrado agora.</p>
+              <details class="previa" data-previa-box>
+                <summary data-icone="eye">Ver prévia da mensagem<span class="previa__seta" data-icone="down"></span></summary>
+                <div class="previa__corpo">
+                  <p class="previa__aviso">É exatamente este texto que vai para o nosso WhatsApp. Ele se atualiza enquanto você preenche.</p>
+                  <div class="previa__bolha"><pre class="previa__texto" data-previa tabindex="0" aria-label="Prévia da mensagem do pedido"></pre></div>
+                </div>
+              </details>
+            </div>
+          </form>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- CARRINHO VAZIO (montado pelo carrinho.js) -->
+    <div class="carrinho-vazio" data-vista="vazio" hidden></div>
+
+    <!-- PEDIDO PRONTO (montado pelo carrinho.js) -->
+    <div class="container carrinho-sucesso" data-vista="sucesso" hidden></div>
+
+    <!-- barra fixa no celular com o total e o atalho para finalizar -->
+    <div class="barra-carrinho" data-barra>
+      <div class="barra-carrinho__valores">
+        <small>Total do pedido</small>
+        <strong data-barra-total></strong>
+        <span class="barra-carrinho__pix" data-barra-pix></span>
+      </div>
+      <a class="btn btn--accent" href="#finalizar" data-ir-finalizar>Finalizar pedido</a>
+    </div>
+
+    <p class="sr-only" aria-live="polite" data-anuncio></p>
+  </main>
+
+  <div id="aura-footer"></div>
+</body>
+</html>
